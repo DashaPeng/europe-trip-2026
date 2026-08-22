@@ -24,7 +24,7 @@
       min-height:90vh; position:relative; display:flex; align-items:flex-end;
       background:
         linear-gradient(180deg,rgba(11,27,40,.12),rgba(11,27,40,.74)),
-        url("assets/images/cover.jpg") center/cover no-repeat;
+        url("./cover.jpg") center/cover no-repeat;
       color:#fff;
     }
     .hero-inner{width:min(1180px,92%);margin:0 auto;padding:90px 0 72px}
@@ -49,8 +49,17 @@
     .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
     .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:24px}
     .card h3{margin:0 0 12px;color:var(--ink)}
-    .photo{border-radius:18px;width:100%;height:auto;object-fit:contain;background:#eef2f5}
-    .photo-card{padding:0;overflow:hidden}
+    .photo{
+      display:block;
+      width:100%;
+      height:auto;
+      max-height:520px;
+      object-fit:contain;
+      object-position:center;
+      border-radius:18px;
+      background:#eef2f5;
+    }
+    .photo-card{padding:0;overflow:hidden;background:#fff}
     .photo-card .copy{padding:22px}
     .notice{background:#fff8ec;border-left:5px solid var(--gold);padding:18px 20px;border-radius:14px;margin:18px 0}
     .good{background:#eef8f3;border-left:5px solid var(--accent2);padding:18px 20px;border-radius:14px;margin:18px 0}
@@ -116,7 +125,7 @@
     <p class="section-sub">國際航班、航廈、起降時間與座位。</p>
     <div class="grid grid-2">
       <div class="card photo-card">
-        <img class="photo" src="assets/images/flight.jpg" alt="飛往歐洲">
+        <img class="photo" src="./flight.jpg" alt="飛往歐洲">
         <div class="copy"><h3>去程｜JX101</h3><p><b>TPE 桃園 T2</b> 00:10 → <b>PRG 布拉格 T1</b> 07:50<br>飛行 13h40m｜座位 33G、33H</p></div>
       </div>
       <div class="card">
@@ -146,7 +155,7 @@
 
     <div class="grid grid-2" style="margin-top:22px">
       <div class="card"><h3>9/24｜Linz 轉車</h3><p><b>10:21 Praha hl.n.</b> → EC333 / 1st → <b>Linz/Donau Hbf</b> → IC644 / 1st → <b>15:49 Salzburg Hbf</b></p><p>IC644：Coach 6，Seat 131、135。整體 5h28m。</p></div>
-      <div class="card photo-card"><img class="photo" src="assets/images/vienna.png" alt="維也納國家歌劇院"><div class="copy"><h3>9/30｜Vienna 半日</h3><p>11:20 抵達 Wien Hbf，17:10 搭 RJ54，停留 <b>5h50m</b>。</p></div></div>
+      <div class="card photo-card"><img class="photo" src="./vienna.png" alt="維也納國家歌劇院"><div class="copy"><h3>9/30｜Vienna 半日</h3><p>11:20 抵達 Wien Hbf，17:10 搭 RJ54，停留 <b>5h50m</b>。</p></div></div>
     </div>
   </div>
 </section>
@@ -204,11 +213,11 @@
   <div class="wrap">
     <h2 class="section-title">5. 🗺️ 行程總覽</h2>
     <div class="grid grid-3">
-      <div class="card photo-card"><img class="photo" src="assets/images/salzburg.webp" alt="Salzburg"><div class="copy"><b>Salzburg</b></div></div>
-      <div class="card photo-card"><img class="photo" src="assets/images/konigssee.jpg" alt="Königssee"><div class="copy"><b>Königssee</b></div></div>
-      <div class="card photo-card"><img class="photo" src="assets/images/budapest.jpg" alt="Budapest"><div class="copy"><b>Budapest</b></div></div>
-      <div class="card photo-card"><img class="photo" src="assets/images/vienna.png" alt="Vienna"><div class="copy"><b>Vienna</b></div></div>
-      <div class="card photo-card"><img class="photo" src="assets/images/prague-river.jpg" alt="Prague"><div class="copy"><b>Prague</b></div></div>
+      <div class="card photo-card"><img class="photo" src="./salzburg.webp" alt="Salzburg"><div class="copy"><b>Salzburg</b></div></div>
+      <div class="card photo-card"><img class="photo" src="./konigssee.jpg" alt="Königssee"><div class="copy"><b>Königssee</b></div></div>
+      <div class="card photo-card"><img class="photo" src="./budapest.jpg" alt="Budapest"><div class="copy"><b>Budapest</b></div></div>
+      <div class="card photo-card"><img class="photo" src="./vienna.png" alt="Vienna"><div class="copy"><b>Vienna</b></div></div>
+      <div class="card photo-card"><img class="photo" src="./prague-river.jpg" alt="Prague"><div class="copy"><b>Prague</b></div></div>
     </div>
   </div>
 </section>
@@ -218,7 +227,7 @@
     <h2 class="section-title">6. 📅 每天詳細行程</h2>
     <p class="section-sub">依已確認航班、長途火車與住宿時間安排。</p>
 
-    <article class="day"><div class="sticky"><h3>DAY 1｜9/24</h3><p>台北 → 布拉格 → 薩爾斯堡</p><img class="photo" src="assets/images/flight.jpg" alt="飛往歐洲"></div><div class="timeline">
+    <article class="day"><div class="sticky"><h3>DAY 1｜9/24</h3><p>台北 → 布拉格 → 薩爾斯堡</p><img class="photo" src="./flight.jpg" alt="飛往歐洲"></div><div class="timeline">
       <div class="item"><div class="time">00:10</div>JX101 從 TPE 桃園機場 T2 起飛。</div>
       <div class="item"><div class="time">07:50</div>抵達 PRG 布拉格機場 T1。</div>
       <div class="item"><div class="time">07:50–08:40</div>入境＋領行李。</div>
@@ -230,7 +239,7 @@
       <div class="item"><div class="time">17:30–20:00</div>Mirabell Gardens → Salzach 河 → Makartsteg → Getreidegasse → 晚餐。</div>
     </div></article>
 
-    <article class="day"><div class="sticky"><h3>DAY 2｜9/25</h3><p>Salzburg → Ramsau</p><img class="photo" src="assets/images/salzburg.webp" alt="Salzburg"></div><div class="timeline">
+    <article class="day"><div class="sticky"><h3>DAY 2｜9/25</h3><p>Salzburg → Ramsau</p><img class="photo" src="./salzburg.webp" alt="Salzburg"></div><div class="timeline">
       <div class="item"><div class="time">08:00</div>起床＋早餐。</div>
       <div class="item"><div class="time">09:00–11:00</div>Mirabell Palace → 老城 → Salzburg Cathedral → Getreidegasse。</div>
       <div class="item"><div class="time">11:00</div>回飯店拿行李。</div>
@@ -239,7 +248,7 @@
       <div class="item"><div class="time">15:30–18:00</div>St. Sebastian Church → Ramsauer Ache → 山區散步；天氣好可加 Hintersee。</div>
     </div></article>
 
-    <article class="day"><div class="sticky"><h3>DAY 3｜9/26</h3><p>國王湖整天</p><img class="photo" src="assets/images/konigssee.jpg" alt="國王湖"></div><div class="timeline">
+    <article class="day"><div class="sticky"><h3>DAY 3｜9/26</h3><p>國王湖整天</p><img class="photo" src="./konigssee.jpg" alt="國王湖"></div><div class="timeline">
       <div class="item"><div class="time">07:30</div>起床。</div>
       <div class="item"><div class="time">08:00</div>早餐。</div>
       <div class="item"><div class="time">08:30–09:00</div>Ramsau 出發前往 Königssee。</div>
@@ -249,7 +258,7 @@
       <div class="item"><div class="time">17:00–18:00</div>回 Ramsau。第二晚續住 Alpenchalet。</div>
     </div></article>
 
-    <article class="day"><div class="sticky"><h3>DAY 4｜9/27</h3><p>Ramsau → Salzburg</p><img class="photo" src="assets/images/salzburg.webp" alt="Salzburg"></div><div class="timeline">
+    <article class="day"><div class="sticky"><h3>DAY 4｜9/27</h3><p>Ramsau → Salzburg</p><img class="photo" src="./salzburg.webp" alt="Salzburg"></div><div class="timeline">
       <div class="item"><div class="time">07:30–08:00</div>起床。</div>
       <div class="item"><div class="time">08:00–09:00</div>早餐。</div>
       <div class="item"><div class="time">09:00–09:45</div>最後散步＋整理行李。</div>
@@ -259,7 +268,7 @@
       <div class="item"><div class="time">21:00前</div>回飯店整理隔天行李；隔日 09:07 RJX61。</div>
     </div></article>
 
-    <article class="day"><div class="sticky"><h3>DAY 5｜9/28</h3><p>Salzburg → Budapest</p><img class="photo" src="assets/images/budapest.jpg" alt="Budapest"></div><div class="timeline">
+    <article class="day"><div class="sticky"><h3>DAY 5｜9/28</h3><p>Salzburg → Budapest</p><img class="photo" src="./budapest.jpg" alt="Budapest"></div><div class="timeline">
       <div class="item"><div class="time">06:45–07:00</div>起床。</div>
       <div class="item"><div class="time">07:15–07:45</div>早餐。</div>
       <div class="item"><div class="time">08:15</div>離開 HOTEL andrä。</div>
@@ -270,7 +279,7 @@
       <div class="item"><div class="time">16:00–19:00</div>St. Stephen's Basilica → 多瑙河岸 → Parliament 外觀。</div>
     </div></article>
 
-    <article class="day"><div class="sticky"><h3>DAY 6｜9/29</h3><p>Budapest 完整日</p><img class="photo" src="assets/images/budapest.jpg" alt="Budapest"></div><div class="timeline">
+    <article class="day"><div class="sticky"><h3>DAY 6｜9/29</h3><p>Budapest 完整日</p><img class="photo" src="./budapest.jpg" alt="Budapest"></div><div class="timeline">
       <div class="item"><div class="time">08:00</div>早餐。</div>
       <div class="item"><div class="time">09:00–11:30</div>Hungarian Parliament → Shoes on the Danube Bank → Liberty Square。</div>
       <div class="item"><div class="time">12:00</div>午餐。</div>
@@ -278,7 +287,7 @@
       <div class="item"><div class="time">17:00後</div>留在 Fisherman's Bastion 等夕陽與國會大廈亮燈。</div>
     </div></article>
 
-    <article class="day"><div class="sticky"><h3>DAY 7｜9/30</h3><p>Budapest → Vienna → Prague</p><img class="photo" src="assets/images/vienna.png" alt="Vienna"></div><div class="timeline">
+    <article class="day"><div class="sticky"><h3>DAY 7｜9/30</h3><p>Budapest → Vienna → Prague</p><img class="photo" src="./vienna.png" alt="Vienna"></div><div class="timeline">
       <div class="item"><div class="time">06:30</div>起床。</div>
       <div class="item"><div class="time">06:45–07:15</div>早餐＋整理。</div>
       <div class="item"><div class="time">07:30</div>離開 Limehome。</div>
@@ -290,7 +299,7 @@
       <div class="item"><div class="time">約22:00</div>前往 Urban Blue Hideout 自助入住。</div>
     </div></article>
 
-    <article class="day"><div class="sticky"><h3>DAY 8｜10/1</h3><p>Prague Old Town Day</p><img class="photo" src="assets/images/prague-river.jpg" alt="Prague"></div><div class="timeline">
+    <article class="day"><div class="sticky"><h3>DAY 8｜10/1</h3><p>Prague Old Town Day</p><img class="photo" src="./prague-river.jpg" alt="Prague"></div><div class="timeline">
       <div class="item"><div class="time">08:00</div>起床＋早餐。</div>
       <div class="item"><div class="time">09:00–12:00</div>Old Town Square → Astronomical Clock → Týn Church → Celetná → Powder Tower。</div>
       <div class="item"><div class="time">12:00–13:30</div>老城午餐。</div>
@@ -298,7 +307,7 @@
       <div class="item"><div class="time">17:30–19:00</div>河邊看夕陽。</div>
     </div></article>
 
-    <article class="day"><div class="sticky"><h3>DAY 9｜10/2</h3><p>Prague Castle Day</p><img class="photo" src="assets/images/prague-city.webp" alt="Prague"></div><div class="timeline">
+    <article class="day"><div class="sticky"><h3>DAY 9｜10/2</h3><p>Prague Castle Day</p><img class="photo" src="./prague-city.webp" alt="Prague"></div><div class="timeline">
       <div class="item"><div class="time">07:30–08:00</div>起床。</div>
       <div class="item"><div class="time">08:30</div>前往 Prague Castle。</div>
       <div class="item"><div class="time">09:00–13:00</div>St. Vitus Cathedral → Old Royal Palace → St. George's Basilica → Golden Lane。</div>
@@ -306,7 +315,7 @@
       <div class="item"><div class="time">17:00後</div>最後採買、超市、伴手禮。</div>
     </div></article>
 
-    <article class="day"><div class="sticky"><h3>DAY 10｜10/3</h3><p>Prague → Taipei</p><img class="photo" src="assets/images/flight.jpg" alt="回台灣"></div><div class="timeline">
+    <article class="day"><div class="sticky"><h3>DAY 10｜10/3</h3><p>Prague → Taipei</p><img class="photo" src="./flight.jpg" alt="回台灣"></div><div class="timeline">
       <div class="item"><div class="time">06:00–06:15</div>起床。</div>
       <div class="item"><div class="time">06:30</div>完成整理。</div>
       <div class="item"><div class="time">07:00</div>離開 Airbnb，前往 PRG T1。</div>
