@@ -134,9 +134,20 @@ img { max-width: 100%; height: auto; }
 }
 </style>
 
+
+<style>
+@media (max-width: 768px) {
+  .nav-inner { overflow-x:auto; -webkit-overflow-scrolling:touch; padding-left:12px; padding-right:12px; }
+  .nav-inner a { flex:0 0 auto; }
+  #highlights .grid, #quick-overview .grid, #cost-summary .kpis { grid-template-columns:1fr !important; }
+  #trip-map .section-sub { line-height:1.8; }
+  #trip-map img { width:100%; height:auto; object-fit:contain; }
+  .table-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+}
+</style>
+
 </head>
 <body>
-
 <header class="hero" id="top">
   <div class="hero-inner">
     <div class="eyebrow">Europe Trip 2026</div>
@@ -149,6 +160,21 @@ img { max-width: 100%; height: auto; }
   </div>
 </header>
 
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#trip-map">🗺️ 路線地圖</a>
+    <a href="#highlights">✨ 旅行亮點</a>
+    <a href="#quick-overview">🧭 快速總覽</a>
+    <a href="#cost-summary">💰 費用總覽</a>
+    <a href="#flights">✈️ 航班</a>
+    <a href="#trains">🚆 火車</a>
+    <a href="#hotels">🏨 住宿</a>
+    <a href="#costs">💳 費用資訊</a>
+    <a href="#daily">📅 每日行程</a>
+  </div>
+</nav>
+
+<main>
 <section id="trip-map" style="padding:56px 0 28px;background:#f6f8fb">
   <div class="wrap">
     <div style="display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:18px">
@@ -163,19 +189,53 @@ img { max-width: 100%; height: auto; }
   </div>
 </section>
 
-
-<nav class="nav">
-  <div class="nav-inner"><a href="#trip-map">🗺️ 地圖</a>
-    <a href="#flights">✈️ 航班</a>
-    <a href="#trains">🚆 火車</a>
-    <a href="#hotels">🏨 住宿</a>
-    <a href="#costs">💰 費用</a>
-    <a href="#overview">🗺️ 總覽</a>
-    <a href="#daily">📅 每日行程</a>
+<section id="highlights">
+  <div class="wrap">
+    <h2 class="section-title">✨ 旅行亮點</h2>
+    <p class="section-sub">這趟旅程的五個主要城市／自然景點。</p>
+    <div class="grid grid-3">
+      <div class="card photo-card"><img class="photo" src="./prague-city.webp" alt="Prague（布拉格）"><div class="copy"><h3>Prague（布拉格）</h3><p>老城廣場、查理大橋、布拉格城堡與伏爾塔瓦河景。</p></div></div>
+      <div class="card photo-card"><img class="photo" src="./salzburg.webp" alt="Salzburg（薩爾斯堡）"><div class="copy"><h3>Salzburg（薩爾斯堡）</h3><p>米拉貝爾花園、老城、城堡與音樂之城氛圍。</p></div></div>
+      <div class="card photo-card"><img class="photo" src="./konigssee.jpg" alt="Königssee（國王湖）"><div class="copy"><h3>Königssee（國王湖）</h3><p>阿爾卑斯山湖景、St. Bartholomä 與 Ramsau 山區。</p></div></div>
+      <div class="card photo-card"><img class="photo" src="./budapest.jpg" alt="Budapest（布達佩斯）"><div class="copy"><h3>Budapest（布達佩斯）</h3><p>國會大廈、多瑙河、布達城堡與漁人堡夜景。</p></div></div>
+      <div class="card photo-card"><img class="photo" src="./vienna.png" alt="Vienna（維也納）"><div class="copy"><h3>Vienna（維也納）</h3><p>Stephansdom、Hofburg、老城散步與咖啡文化。</p></div></div>
+    </div>
   </div>
-</nav>
+</section>
 
-<main>
+
+<section id="quick-overview">
+  <div class="wrap">
+    <h2 class="section-title">🧭 快速總覽</h2>
+    <p class="section-sub">11 天行程一眼看懂。</p>
+    <div class="grid grid-3">
+      <div class="card"><h3>9/24</h3><p>台北 → Prague（布拉格） → Salzburg（薩爾斯堡）</p></div>
+      <div class="card"><h3>9/25–9/26</h3><p>Salzburg（薩爾斯堡） → Ramsau（拉姆紹）／Königssee（國王湖）</p></div>
+      <div class="card"><h3>9/27</h3><p>Ramsau（拉姆紹） → Salzburg（薩爾斯堡）</p></div>
+      <div class="card"><h3>9/28–9/29</h3><p>Salzburg（薩爾斯堡） → Budapest（布達佩斯）</p></div>
+      <div class="card"><h3>9/30</h3><p>Budapest（布達佩斯） → Vienna（維也納） → Prague（布拉格）</p></div>
+      <div class="card"><h3>10/1–10/4</h3><p>Prague（布拉格）完整行程 → 10/3 JX102 回台 → 10/4 抵達桃園</p></div>
+    </div>
+  </div>
+</section>
+
+
+<section id="cost-summary">
+  <div class="wrap">
+    <h2 class="section-title">💰 費用總覽</h2>
+    <p class="section-sub">目前只計已知固定成本；餐飲、當地交通、國王湖船票、景點門票與購物暫不納入。</p>
+    <div class="kpis">
+      <div class="kpi"><span>✈️ 國際機票</span><strong>NT$70,000</strong><small>2 人</small></div>
+      <div class="kpi"><span>🚆 長途火車</span><strong>NT$15,130</strong><small>含刷卡手續費</small></div>
+      <div class="kpi"><span>🏨 住宿</span><strong>NT$49,130</strong><small>含手續費＋城市稅預留</small></div>
+    </div>
+    <div class="good" style="margin-top:24px">
+      <b>目前已知固定成本：</b>NT$134,260／2人 ｜ <b>NT$67,130／人</b><br>
+      <span style="color:var(--muted)">暫不計：餐飲、當地交通、國王湖船票、景點門票、購物。</span>
+    </div>
+  </div>
+</section>
+
 <section id="flights">
   <div class="wrap">
     <h2 class="section-title">1. ✈️ 航班資訊</h2>
@@ -194,7 +254,6 @@ img { max-width: 100%; height: auto; }
     <div class="good"><b>9/24 銜接：</b>07:50 抵達 PRG T1 → 入境／領行李 → Praha（布拉格） hl.n. → 10:21 EC333。落地到火車發車共有 2 小時 31 分。</div>
   </div>
 </section>
-
 <section id="trains">
   <div class="wrap">
     <h2 class="section-title">2. 🚆 長途火車資訊</h2>
@@ -216,7 +275,6 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
 </section>
-
 <section id="hotels">
   <div class="wrap">
     <h2 class="section-title">3. 🏨 住宿資訊＋交通銜接</h2>
@@ -237,45 +295,69 @@ img { max-width: 100%; height: auto; }
     </div>
   </div>
 </section>
-
 <section id="costs">
-<div class="wrap">
-<h2 class="section-title">4. 💰 費用明細</h2>
-<p class="section-sub">2 人｜目前已知固定成本；餐飲、當地交通、國王湖船票、景點門票與購物暫不納入。</p>
-<div class="grid grid-2">
-<div class="card"><h3>✈️ 國際機票</h3><p>STARLUX 台北 ⇄ 布拉格</p><p class="money">NT$70,000／2人</p><p>每人 NT$35,000</p></div>
-<div class="card"><h3>🚆 長途火車</h3><p>Praha（布拉格） → Salzburg（薩爾斯堡）：€109.60</p><p>Salzburg（薩爾斯堡） → Budapest（布達佩斯）：€184.40</p><p>Budapest（布達佩斯） → Wien（維也納）：€54.00</p><p>Wien（維也納） → Praha（布拉格）：€58.80</p><p>票面合計：<b>€406.80</b></p><p>刷卡 NT$14,905＋手續費 NT$225</p><p class="money">實際成本 NT$15,130／2人</p></div>
-</div>
-<div class="card" style="margin-top:22px"><h3>🏨 住宿明細</h3><div class="table-wrap"><table>
-<thead><tr><th>日期</th><th>住宿</th><th>原幣</th><th>刷卡台幣</th><th>手續費</th><th>含手續費</th><th>城市稅／Spa Tax 預留</th></tr></thead><tbody>
-<tr><td>9/24–25</td><td>June Six Salzburg（薩爾斯堡）</td><td>€122.07</td><td>NT$4,448</td><td>NT$67</td><td class="money">NT$4,515</td><td>約 NT$260</td></tr>
-<tr><td>9/25–27</td><td>Alpenchalet Wasserfallblick</td><td>€399.10</td><td>NT$15,647</td><td>NT$235</td><td class="money">NT$15,882</td><td>約 NT$520</td></tr>
-<tr><td>9/27–28</td><td>HOTEL andrä</td><td>€143.39</td><td>NT$5,224</td><td>NT$78</td><td class="money">NT$5,302</td><td>約 NT$260</td></tr>
-<tr><td>9/28–30</td><td>Limehome Budapest（布達佩斯） Mosonyi</td><td>€238.73</td><td>NT$8,667</td><td>NT$130</td><td class="money">NT$8,797</td><td>約 NT$520</td></tr>
-<tr><td>9/30–10/3</td><td>Prague（布拉格） Airbnb</td><td>US$372.68</td><td>NT$12,112</td><td>NT$182</td><td class="money">NT$12,294</td><td>約 NT$780</td></tr>
-</tbody></table></div>
-<p><b>住宿刷卡成本：</b>NT$46,790／2人</p><p><b>城市稅／Spa Tax 預留：</b>NT$2,340／2人</p><p class="money">住宿含稅預留：NT$49,130／2人</p></div>
-<div class="kpis">
-<div class="kpi"><span>✈️ 國際機票</span><strong>NT$70,000</strong><small>2 人</small></div>
-<div class="kpi"><span>🚆 長途火車</span><strong>NT$15,130</strong><small>含手續費</small></div>
-<div class="kpi"><span>🏨 住宿</span><strong>NT$49,130</strong><small>含手續費＋城市稅預留</small></div>
-</div>
-<div class="good"><b>目前已知固定成本：</b>NT$134,260／2人 ｜ <b>NT$67,130／人</b><br><span style="color:var(--muted)">暫不計：餐飲、當地交通、國王湖船票、景點門票、購物。</span></div>
-</div></section>
-
-<section id="overview">
   <div class="wrap">
-    <h2 class="section-title">5. 🗺️ 行程總覽</h2>
-    <div class="grid grid-3">
-      <div class="card photo-card"><img class="photo" src="./salzburg.webp" alt="Salzburg（薩爾斯堡）"><div class="copy"><b>Salzburg（薩爾斯堡）</b></div></div>
-      <div class="card photo-card"><img class="photo" src="./konigssee.jpg" alt="Königssee（國王湖）"><div class="copy"><b>Königssee（國王湖）</b></div></div>
-      <div class="card photo-card"><img class="photo" src="./budapest.jpg" alt="Budapest（布達佩斯）"><div class="copy"><b>Budapest（布達佩斯）</b></div></div>
-      <div class="card photo-card"><img class="photo" src="./vienna.png" alt="Vienna（維也納）"><div class="copy"><b>Vienna（維也納）</b></div></div>
-      <div class="card photo-card"><img class="photo" src="./prague-river.jpg" alt="Prague（布拉格）"><div class="copy"><b>Prague（布拉格）</b></div></div>
+    <h2 class="section-title">💳 費用資訊</h2>
+    <p class="section-sub">這裡只保留付款明細、刷卡手續費與城市稅／Spa Tax 預留；總額請看前面的「費用總覽」。</p>
+
+    <div class="card">
+      <h3>🏨 住宿付款明細</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>日期</th>
+              <th>住宿</th>
+              <th>原幣</th>
+              <th>刷卡台幣</th>
+              <th>手續費</th>
+              <th>含手續費</th>
+              <th>城市稅／Spa Tax 預留</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>9/24–25</td><td>June Six Salzburg（薩爾斯堡）</td><td>€122.07</td><td>NT$4,448</td><td>NT$67</td><td class="money">NT$4,515</td><td>約 NT$260</td></tr>
+            <tr><td>9/25–27</td><td>Alpenchalet Wasserfallblick</td><td>€399.10</td><td>NT$15,647</td><td>NT$235</td><td class="money">NT$15,882</td><td>約 NT$520</td></tr>
+            <tr><td>9/27–28</td><td>HOTEL andrä</td><td>€143.39</td><td>NT$5,224</td><td>NT$78</td><td class="money">NT$5,302</td><td>約 NT$260</td></tr>
+            <tr><td>9/28–30</td><td>Limehome Budapest（布達佩斯） Mosonyi</td><td>€238.73</td><td>NT$8,667</td><td>NT$130</td><td class="money">NT$8,797</td><td>約 NT$520</td></tr>
+            <tr><td>9/30–10/3</td><td>Prague（布拉格） Airbnb</td><td>US$372.68</td><td>NT$12,112</td><td>NT$182</td><td class="money">NT$12,294</td><td>約 NT$780</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:18px"><b>住宿刷卡成本：</b>NT$46,790／2人</p>
+      <p><b>城市稅／Spa Tax 預留：</b>NT$2,340／2人</p>
+    </div>
+
+    <div class="card" style="margin-top:22px">
+      <h3>🚆 火車付款資訊</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>路線</th>
+              <th>票面金額</th>
+              <th>刷卡台幣</th>
+              <th>手續費</th>
+              <th>含手續費</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Praha（布拉格） → Salzburg（薩爾斯堡）</td><td>€109.60</td><td rowspan="2">NT$10,702</td><td rowspan="2">NT$161</td><td rowspan="2" class="money">NT$10,863</td></tr>
+            <tr><td>Salzburg（薩爾斯堡） → Budapest（布達佩斯）</td><td>€184.40</td></tr>
+            <tr><td>Budapest（布達佩斯） → Wien（維也納）</td><td>€54.00</td><td>NT$2,191</td><td>NT$33</td><td class="money">NT$2,224</td></tr>
+            <tr><td>Wien（維也納） → Praha（布拉格）</td><td>€58.80</td><td>NT$2,012</td><td>NT$31</td><td class="money">NT$2,043</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:18px"><b>火車票面合計：</b>€406.80</p>
+      <p><b>刷卡台幣：</b>NT$14,905　｜　<b>手續費：</b>NT$225</p>
+    </div>
+
+    <div class="notice" style="margin-top:22px">
+      <b>注意：</b>本區只記錄付款細節，不再重複顯示國際機票、長途火車、住宿與固定成本總額。
     </div>
   </div>
 </section>
-
 <section id="daily">
   <div class="wrap">
     <h2 class="section-title">6. 📅 每天詳細行程</h2>
@@ -383,7 +465,6 @@ img { max-width: 100%; height: auto; }
   </div>
 </section>
 </main>
-
 <footer><div class="wrap">2026 Europe Trip · GitHub Pages One Page Site</div></footer>
 </body>
 </html>
