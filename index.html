@@ -24,7 +24,7 @@
       min-height:90vh; position:relative; display:flex; align-items:flex-end;
       background:
         linear-gradient(180deg,rgba(11,27,40,.12),rgba(11,27,40,.74)),
-        url("./cover.jpg") center/cover no-repeat;
+        url("./map-cover.jpg") center/cover no-repeat;
       color:#fff;
     }
     .hero-inner{width:min(1180px,92%);margin:0 auto;padding:90px 0 72px}
@@ -92,6 +92,48 @@
       .hero{min-height:76vh}
     }
   </style>
+
+<style>
+/* Mobile-first refinements */
+html { scroll-behavior: smooth; }
+img { max-width: 100%; height: auto; }
+.hero {
+  background-position: center center !important;
+  background-size: cover !important;
+}
+.route-map img, .map img, img[src*="map-cover"], img[src*="trip-map"] {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+@media (max-width: 768px) {
+  body { overflow-x: hidden; }
+  .container, .wrap, .section, main {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    box-sizing: border-box;
+  }
+  .hero {
+    min-height: 72vh !important;
+    padding: 72px 18px 36px !important;
+    background-position: center !important;
+  }
+  .hero h1 { font-size: clamp(44px, 15vw, 72px) !important; line-height: 1.02 !important; }
+  .hero p { font-size: 16px !important; line-height: 1.6 !important; }
+  .chips, .tags, .hero-tags {
+    display: flex !important; flex-wrap: wrap !important; gap: 8px !important;
+  }
+  table { min-width: 720px; }
+  .table-wrap, .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .grid, .cards, .highlights, .overview-grid {
+    grid-template-columns: 1fr !important;
+  }
+  nav { overflow-x: auto; white-space: nowrap; }
+}
+</style>
+
 </head>
 <body>
 
