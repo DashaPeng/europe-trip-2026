@@ -146,6 +146,21 @@ img { max-width: 100%; height: auto; }
 }
 </style>
 
+
+<style>
+.route-map-only img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
+}
+@media(max-width:768px){
+  #trip-map{padding:34px 0 18px !important}
+  #trip-map .section-sub{font-size:14px;line-height:1.75}
+  .route-map-only{border-radius:16px}
+}
+</style>
+
 </head>
 <body>
 <header class="hero" id="top">
@@ -177,14 +192,14 @@ img { max-width: 100%; height: auto; }
 <main>
 <section id="trip-map" style="padding:56px 0 28px;background:#f6f8fb">
   <div class="wrap">
-    <div style="display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:18px">
-      <div>
-        <h2 class="section-title" style="margin-bottom:6px">🗺️ 旅行路線地圖</h2>
-        <p class="section-sub" style="margin:0">Prague（布拉格） → Salzburg（薩爾斯堡） → Königssee（國王湖） → Salzburg（薩爾斯堡） → Budapest（布達佩斯） → Vienna（維也納） → Prague（布拉格）</p>
-      </div>
+    <div style="margin-bottom:18px">
+      <h2 class="section-title" style="margin-bottom:6px">🗺️ 旅行路線地圖</h2>
+      <p class="section-sub" style="margin:0">
+        Prague（布拉格） → Salzburg（薩爾斯堡） → Königssee（國王湖） → Salzburg（薩爾斯堡） → Budapest（布達佩斯） → Vienna（維也納） → Prague（布拉格）
+      </p>
     </div>
-    <div class="card photo-card" style="padding:0">
-      <img src="./trip-map.png" alt="2026 歐洲旅行路線地圖" style="display:block;width:100%;height:auto;object-fit:contain">
+    <div class="card photo-card route-map-only" style="padding:0;overflow:hidden">
+      <img src="./route-map.png" alt="Prague、Salzburg、Königssee、Budapest、Vienna 旅行路線地圖">
     </div>
   </div>
 </section>
